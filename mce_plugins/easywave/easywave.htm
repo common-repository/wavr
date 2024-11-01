@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#easywave_dlg.title}</title>
+	<script type="text/javascript" src="/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="/wp-includes/js/tinymce/utils/editable_selects.js"></script>
+	<script type="text/javascript" src="/wp-includes/js/tinymce/utils/form_utils.js"></script>
+	<script type="text/javascript" src="js/easywave.js"></script>
+	<link href="css/template.css" rel="stylesheet" type="text/css" />
+</head>
+<body onresize="EasywaveDialog.resize();">
+	<form action="" onsubmit="EasywaveDialog.insert();return false;">
+		<div id="frmbody">
+			<div class="title">{#easywave_dlg.desc}</div>
+			<table class="form">
+			    <tr>
+				<td>
+				    <label for="easywave_wave_id" title="{#easywave_dlg.wave_id_desc}">{#easywave_dlg.wave_id}:</label>
+				</td>
+				<td colspan="2">
+				    <input id="easywave_wave_id" name="wave_id" onchange="EasywaveDialog.updatePreview()" class="mceFocus" type="text" />
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    <label for="easywave_server" title="{#easywave_dlg.server_desc}">{#easywave_dlg.server}:</label>
+				</td>
+				<td colspan="2">
+				    <input id="easywave_server" name="server" onchange="EasywaveDialog.updatePreview()" class="mceFocus" type="text" />
+				</td>
+			    </tr>
+			    <tr>
+				<td colspan="2">
+				    {#easywave_dlg.server_desc}
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    <label for="easywave_text_color" title="{#easywave_dlg.text_color_desc}">{#easywave_dlg.text_color}:</label>
+				</td>
+				<td>
+				    <input id="easywave_text_color" name="color" onchange="EasywaveDialog.updatePreview();updateColor('easywave_text_color','easywave_text_color');" class="mceFocus" type="text" />
+				</td>
+				<td>
+				    <span id="easywave_text_color_pickcontainer"></span>
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    <label for="easywave_bg_color" title="{#easywave_dlg.text_color_desc}">{#easywave_dlg.bg_color}:</label>
+				</td>
+				<td>
+				    <input id="easywave_bg_color" name="bgcolor" onchange="EasywaveDialog.updatePreview();updateColor('easywave_bg_color','easywave_bg_color');" class="mceFocus" type="text" />
+				</td>
+				<td>
+				    <span id="easywave_bg_color_pickcontainer"></span>
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    <label for="easywave_font" title="{#easywave_dlg.font_desc}">{#easywave_dlg.font}:</label>
+				</td>
+				<td colspan="2">
+				    <select id="easywave_font" name="font" onchange="EasywaveDialog.updatePreview();"  class="mceEditableSelect mceFocus"></select>
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    <label for="easywave_font_size" title="{#easywave_dlg.font_size_desc}">{#easywave_dlg.font_size}:</label>
+				</td>
+				<td colspan="2">
+				    <input id="easywave_font_size" name="font_size" onchange="EasywaveDialog.updatePreview();" class="" size="3"></input>pt
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    <label for="easywave_width" title="{#easywave_dlg.width_desc}">{#easywave_dlg.width}:</label>
+				</td>
+				<td colspan="2">
+				    <input id="easywave_width" name="width" onchange="EasywaveDialog.updatePreview();" class="" size="6"></input>
+				</td>
+			    </tr>
+			    <tr>
+				<td>
+				    <label for="easywave_height" title="{#easywave_dlg.height_desc}">{#easywave_dlg.height}:</label>
+				</td>
+				<td colspan="2">
+				    <input id="easywave_height" name="height" onchange="EasywaveDialog.updatePreview();" class="" size="6"></input>
+				</td>
+			    </tr>
+			</table>
+			<span id="warning"></span>
+			
+			<fieldset>
+				<legend>{#easywave_dlg.preview}</legend>
+				<div id="easywave_preview" style="height:6em;line-height:1.5em;"></div>
+			</fieldset>
+		</div>
+		
+		<div class="mceActionPanel">
+			<div style="float: left">
+				<input type="submit" id="insert" name="insert" value="{#insert}" />
+			</div>
+
+			<div style="float: right">
+				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+			</div>
+
+			<br style="clear:both" />
+		</div>
+	</form>
+</body> 
+</html> 

@@ -1,0 +1,25 @@
+tinyMCE.addI18n('en.easywave_dlg',{
+title:"Easywave",
+label:"Easywave",
+desc_label:"Easy Wave",
+desc:"Insert a shortcode for google wave",
+wave_id:"Wave Id (or url)",
+wave_id_desc:"Write here the Wave Id(or the url and i'll try to guess the id)",
+server:"Wave server (url)",
+server_desc:"The google wave server to use. Sandbox: http://wave.google.com/a/wavesandbox.com/ or Preview: https://wave.google.com/wave/",
+text_color:"Text Color",
+text_color_desc:"Text color for the wave",
+bg_color:"Background Color",
+bg_color_desc:"Background color for the wave",
+font:"Font",
+font_desc:"Select the default font for the wave",
+font_size:"Font Size",
+font_size_desc:"Select the default font size for the wave, expressed in points",
+width:"Width",
+width_desc:"The width of the wave, including units (ex: 100%)",
+height:"Height",
+height_desc:"The height of the wave, including units (ex: 500px)",
+preview:"Preview",
+warning:"Warning: "
+
+});
